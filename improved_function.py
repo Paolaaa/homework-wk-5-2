@@ -1,5 +1,7 @@
 from __future__ import division
 def get_at_content(dna):
+#in order to get the correct AT content regardless of having a sequence with a bunch of unknow sequences we can remove all the N characters before the calculations are carried out
+    dna = dna.replace('N','')
     length = len(dna)
 #to solve the lower case problem, convert the input sequence to upper case before starting the calculation
     a_count = dna.upper() .count('A')
